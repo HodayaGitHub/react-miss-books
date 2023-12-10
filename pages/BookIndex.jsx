@@ -27,6 +27,19 @@ export function BookIndex() {
             .catch((err) => console.log('err:', err))
     }
 
+    function onRemoveBook(bookId) {
+        carService.remove(bookId)
+            .then(() => {
+                setCars(prevBook => {
+                    return prevBook.filter(book => book.id !== bookId)
+                })
+            })
+            .catch(err => console.log('err:', err))
+
+    }
+
+
+
     function OnSelectBookId(bookId) {
         setSelectedBookId(bookId)
     }
@@ -37,12 +50,12 @@ export function BookIndex() {
 
     if (books) {
         return (
-            <section className="car-index">
+            <section className="book-index">
                 {!selectedBookId &&
                     <React.Fragment>
                         <h1>Welcome to car index!</h1>
                         <BookFilter filterBy={filterBy} onSetFilter={onSetFilter} />
-                        <BookList books={books} onSelectBookId={OnSelectBookId} />
+                        <BookList books={books} onSelectBookId={OnSelectBookId} onRemoveBook={onRemoveBook}/>
                     </React.Fragment>
                 }
                 {selectedBookId && <BookDetails onBack={() => setSelectedBookId(null)} bookId={selectedBookId} />}
