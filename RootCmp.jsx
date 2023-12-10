@@ -1,4 +1,6 @@
-import { Home } from './cmps/Home.jsx'
+// import { HomePage } from './pages/HomePage.jsx'
+import { BookIndex } from './pages/BookIndex.jsx'
+
 
 export function App() {
     return (
@@ -7,7 +9,8 @@ export function App() {
                 <h1>Miss Books</h1>
             </header>
             <main className="container">
-                {/* <Home /> */}
+                {/* <HomePage /> */}
+                {/* <BookIndex /> */}
             </main>
         </section>
     )
