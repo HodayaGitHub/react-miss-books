@@ -8,7 +8,7 @@ export function App() {
             <header className="app-header full main-layout">
                 <h1>Miss Books</h1>
             </header>
-            <main className="container">
+            <main className="">
                 {/* <HomePage /> */}
                 <BookIndex />
             </main>

@@ -4,7 +4,7 @@ export function BookList({ books, onSelectBookId, onRemoveBook }) {
 
 
     return (
-        <div>
+        <div class="books-container">
             {books.map((book) => (
                 <div key={book.id} className="book-item">
                     <BookPreview book={book} />
