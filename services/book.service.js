@@ -31,13 +31,9 @@ function _createBooksFromJson() {
     console.log(books)
 }
 
-
-
 function getDefaultFilter() {
     return { txt: '', minPrice: '' }
 }
-
-
 
 function query(filterBy) {
     return storageService.query(BOOK_KEY)
