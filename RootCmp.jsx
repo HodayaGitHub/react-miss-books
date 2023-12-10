@@ -10,7 +10,7 @@ export function App() {
             </header>
             <main className="container">
                 {/* <HomePage /> */}
-                {/* <BookIndex /> */}
+                <BookIndex />
             </main>
         </section>
     )
