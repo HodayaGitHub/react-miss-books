@@ -4,7 +4,7 @@ export function BookList({ books, onSelectBookId, onRemoveBook }) {
 
 
     return (
-        <div class="books-container">
+        <div className="books-container">
             {books.map((book) => (
                 <div key={book.id} className="book-item">
                     <BookPreview book={book} />
@@ -18,9 +18,3 @@ export function BookList({ books, onSelectBookId, onRemoveBook }) {
     )
 }
 
-
-
-{/* <h2>{book.title}</h2>
-<p><strong>Authors:</strong> {book.authors.join(', ')}</p>
-<p>price: {book.listPrice.amount}</p>
-<img src={book.thumbnail} alt={`Thumbnail for ${book.title}`} /> */}
