@@ -40,9 +40,18 @@ export function BookDetails({ onBack }) {
     }
 
 
+
     const onNextBook = () => {
-        navigate(`/books/1y0Oqts35DQ`)
+        bookService.getNextBookId(params.bookId)
+            .then((nextBookId) => {
+                navigate(`/books/${nextBookId}`)
+            })
+            .catch((err) => {
+                console.error("Error getting next book ID:", err)
+                navigate('/books')
+            })
     }
+
 
 
     if (!book) return <div>Loading...</div>

@@ -39,8 +39,6 @@ function getEmptyBook(title = '', price = '') {
     return { title, price }
 }
 
-
-
 function query(filterBy) {
     return storageService.query(BOOK_KEY)
         .then(books => {
