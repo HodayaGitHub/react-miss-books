@@ -40,7 +40,7 @@ export function BookIndex() {
     }
 
     const onAddBook = () => {
-        navigate(`/books/edit`);
+        navigate(`/books/edit`)
     }
 
 

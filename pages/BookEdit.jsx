@@ -5,7 +5,7 @@ const { useState, useEffect } = React
 
 export function BookEdit() {
     const [bookToEdit, setBookToEdit] = useState(bookService.getEmptyBook())
-    console.log('bookToEdit:', bookToEdit)
+    // console.log('bookToEdit:', bookToEdit)
     const navigate = useNavigate()
     const params = useParams()
 
@@ -45,7 +45,12 @@ export function BookEdit() {
     function onSaveBook(ev) {
         ev.preventDefault()
         bookService.save(bookToEdit)
-            .then(() => navigate('/books'))
+            .then(() => {
+                navigate('/books')
+                showSuccessMsg(`Book successfully added! ${bookToEdit.title}`)
+
+            })
+
             .catch(err => console.log('err:', err))
     }
 
@@ -53,7 +58,7 @@ export function BookEdit() {
 
     return (
         <section className="book-edit">
-            
+
             <h1>Add Book</h1>
             <form onSubmit={onSaveBook}>
                 <label htmlFor="title">Title</label>
