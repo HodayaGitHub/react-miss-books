@@ -5,6 +5,7 @@ const { Routes, Route } = ReactRouterDOM
 import { AppHeader } from './cmp/AppHeader.jsx'
 import { AboutTeam } from './cmp/AboutTeam.jsx'
 import { AboutGoal } from './cmp/AboutGoal.jsx'
+import { UserMsg } from './cmp/UserMsg.jsx'
 
 import { BookIndex } from './pages/BookIndex.jsx'
 import { HomePage } from './pages/HomePage.jsx'
@@ -29,13 +30,10 @@ export function App() {
                             <Route path="goal" element={<AboutGoal />} />
                         </Route>
                         <Route path="/books/edit" element={<BookEdit />} />
-
                     </Routes>
 
-
-
-                    {/* <BookIndex /> */}
                 </main>
+                <UserMsg />
             </section>
         </Router>
     )
