@@ -1,18 +1,34 @@
 import { bookService } from "../services/book.service.js"
 
 const { useState, useEffect } = React
+const { useParams, useNavigate, Link } = ReactRouterDOM
 
 export function BookDetails({ bookId, onBack }) {
 
     const [book, setBook] = useState(null)
     const currYear = new Date().getFullYear()
+    const params = useParams()
+    const navigate = useNavigate()
+
     // const [isExpensive, setIsExpensive] = useState(false)
 
-
     useEffect(() => {
-        bookService.get(bookId)
+        loadBook()
+    }, [params.bookId])
+
+
+    function loadBook() {
+        bookService.get(params.bookId)
             .then(book => setBook(book))
-    }, [])
+            .catch(err => {
+                console.log('err:', err)
+                navigate('/books')
+            })
+    }
+
+    function onBack() {
+        navigate('/books')
+    }
 
     function isExpensive() {
         let dynClass = ''
@@ -48,6 +64,8 @@ export function BookDetails({ bookId, onBack }) {
             <p><strong>Description:</strong> {book.description}</p>
             <img src={`../assets/img/books/${book.thumbnail}`} alt={`Thumbnail for ${book.title}`} />
             <button onClick={onBack}>Back</button>
+            <Link to={`/books/1y0Oqts35DQ`}>Next Book</Link>
+
         </section >
     )
 }

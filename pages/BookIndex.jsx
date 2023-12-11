@@ -2,7 +2,6 @@
 {/* <BookIndex> - renders the filter and the list */ }
 
 import { bookService } from "../services/book.service.js"
-import { BookDetails } from "./BookDetails.jsx"
 import { BookFilter } from "../cmp/BookFilter.jsx"
 import { BookList } from "../cmp/BookList.jsx"
 const { useState, useEffect } = React
@@ -10,7 +9,7 @@ const { useState, useEffect } = React
 export function BookIndex() {
 
     const [books, setBooks] = useState(null)
-    const [selectedBookId, setSelectedBookId] = useState(null)
+    // const [selectedBookId, setSelectedBookId] = useState(null)
     const [filterBy, setFilterBy] = useState(bookService.getDefaultFilter())
 
 
@@ -33,32 +32,24 @@ export function BookIndex() {
                 setCars(prevBook => {
                     return prevBook.filter(book => book.id !== bookId)
                 })
+                showSuccessMsg(`Book successfully removed! ${bookId}`)
             })
             .catch(err => console.log('err:', err))
-
     }
 
-
-
-    function OnSelectBookId(bookId) {
-        setSelectedBookId(bookId)
-    }
 
     function onSetFilter(filterBy) {
-        setFilterBy(filterBy)
+        setFilterBy(prevFilter => ({ ...prevFilter, ...filterBy }))
     }
 
     if (books) {
         return (
             <section className="book-index">
-                {!selectedBookId &&
-                    <React.Fragment>
-                        <h1>Welcome to book index!</h1>
-                        <BookFilter filterBy={filterBy} onSetFilter={onSetFilter} />
-                        <BookList books={books} onSelectBookId={OnSelectBookId} onRemoveBook={onRemoveBook}/>
-                    </React.Fragment>
-                }
-                {selectedBookId && <BookDetails onBack={() => setSelectedBookId(null)} bookId={selectedBookId} />}
+                <React.Fragment>
+                    <h1>Welcome to book index!</h1>
+                    <BookFilter filterBy={filterBy} onSetFilter={onSetFilter} />
+                    <BookList books={books} onRemoveBook={onRemoveBook} />
+                </React.Fragment>
             </section>
         )
 
