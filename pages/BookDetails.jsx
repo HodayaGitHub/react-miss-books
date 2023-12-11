@@ -3,14 +3,13 @@ import { bookService } from "../services/book.service.js"
 const { useState, useEffect } = React
 const { useParams, useNavigate, Link } = ReactRouterDOM
 
-export function BookDetails({ bookId, onBack }) {
+export function BookDetails({ onBack }) {
 
     const [book, setBook] = useState(null)
     const currYear = new Date().getFullYear()
     const params = useParams()
     const navigate = useNavigate()
 
-    // const [isExpensive, setIsExpensive] = useState(false)
 
     useEffect(() => {
         loadBook()
@@ -41,6 +40,9 @@ export function BookDetails({ bookId, onBack }) {
     }
 
 
+    const onNextBook = () => {
+        navigate(`/books/1y0Oqts35DQ`)
+    }
 
 
     if (!book) return <div>Loading...</div>
@@ -64,7 +66,10 @@ export function BookDetails({ bookId, onBack }) {
             <p><strong>Description:</strong> {book.description}</p>
             <img src={`../assets/img/books/${book.thumbnail}`} alt={`Thumbnail for ${book.title}`} />
             <button onClick={onBack}>Back</button>
-            <Link to={`/books/1y0Oqts35DQ`}>Next Book</Link>
+
+            <button onClick={onNextBook}>
+                Next Book
+            </button>
 
         </section >
     )

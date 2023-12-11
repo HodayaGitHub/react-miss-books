@@ -1,5 +1,7 @@
 // • <BookIndex> – the app we will be building: a CRUDL for books 
 {/* <BookIndex> - renders the filter and the list */ }
+// const { Link,  useNavigate} = ReactRouterDOM
+const { useNavigate } = ReactRouterDOM
 
 import { bookService } from "../services/book.service.js"
 import { BookFilter } from "../cmp/BookFilter.jsx"
@@ -9,8 +11,8 @@ const { useState, useEffect } = React
 export function BookIndex() {
 
     const [books, setBooks] = useState(null)
-    // const [selectedBookId, setSelectedBookId] = useState(null)
     const [filterBy, setFilterBy] = useState(bookService.getDefaultFilter())
+    const navigate = useNavigate()
 
 
     useEffect(() => {
@@ -27,14 +29,18 @@ export function BookIndex() {
     }
 
     function onRemoveBook(bookId) {
-        carService.remove(bookId)
+        bookService.remove(bookId)
             .then(() => {
-                setCars(prevBook => {
+                setBooks(prevBook => {
                     return prevBook.filter(book => book.id !== bookId)
                 })
                 showSuccessMsg(`Book successfully removed! ${bookId}`)
             })
             .catch(err => console.log('err:', err))
+    }
+
+    const onAddBook = () => {
+        navigate(`/books/edit`);
     }
 
 
@@ -48,6 +54,9 @@ export function BookIndex() {
                 <React.Fragment>
                     <h1>Welcome to book index!</h1>
                     <BookFilter filterBy={filterBy} onSetFilter={onSetFilter} />
+                    <button onClick={onAddBook}>
+                        Add Book
+                    </button>
                     <BookList books={books} onRemoveBook={onRemoveBook} />
                 </React.Fragment>
             </section>

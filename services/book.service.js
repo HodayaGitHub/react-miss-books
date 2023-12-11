@@ -35,6 +35,12 @@ function getDefaultFilter() {
     return { txt: '', minPrice: '' }
 }
 
+function getEmptyBook(title = '', price = '') {
+    return { title, price }
+}
+
+
+
 function query(filterBy) {
     return storageService.query(BOOK_KEY)
         .then(books => {
@@ -65,10 +71,6 @@ function save(book) {
     }
 }
 
-function getEmptyBook(title = '', maxPrice = 0) {
-    return { id: '', title, maxPrice }
-}
-
 function getFilterBy() {
     return { ...books }
 }
@@ -88,21 +90,21 @@ function getNextBookId(bookId) {
         })
 }
 
-function _createBook(title, maxPrice = 250) {
-    const book = getEmptyBook(title, maxPrice)
-    book.id = utilService.makeId()
-    return book
-}
+// function _createBook(title, maxPrice = 250) {
+//     const book = getEmptyBook(title, maxPrice)
+//     book.id = utilService.makeId()
+//     return book
+// }
 
 
-function _createBooks() {
-    let books = utilService.loadFromStorage(BOOK_KEY)
-    if (!books || !books.length) {
-        books = []
-        books.push(_createBook('audu', 300))
-        books.push(_createBook('fiak', 120))
-        books.push(_createBook('subali', 100))
-        books.push(_createBook('mitsu', 150))
-        utilService.saveToStorage(BOOK_KEY, books)
-    }
-}
+// function _createBooks() {
+//     let books = utilService.loadFromStorage(BOOK_KEY)
+//     if (!books || !books.length) {
+//         books = []
+//         books.push(_createBook('audu', 300))
+//         books.push(_createBook('fiak', 120))
+//         books.push(_createBook('subali', 100))
+//         books.push(_createBook('mitsu', 150))
+//         utilService.saveToStorage(BOOK_KEY, books)
+//     }
+// }

@@ -10,6 +10,7 @@ import { BookIndex } from './pages/BookIndex.jsx'
 import { HomePage } from './pages/HomePage.jsx'
 import { AboutUs } from './pages/AboutUs.jsx'
 import { BookDetails } from './pages/BookDetails.jsx'
+import { BookEdit } from './pages/BookEdit.jsx'
 
 
 export function App() {
@@ -27,6 +28,8 @@ export function App() {
                             <Route path="team" element={<AboutTeam />} />
                             <Route path="goal" element={<AboutGoal />} />
                         </Route>
+                        <Route path="/books/edit" element={<BookEdit />} />
+
                     </Routes>
 
 
