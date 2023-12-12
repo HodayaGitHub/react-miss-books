@@ -1,4 +1,5 @@
 import { bookService } from "../services/book.service.js"
+import { LongTxt } from "../cmp/LongTxt.jsx"
 
 const { useState, useEffect } = React
 const { useParams, useNavigate, Link } = ReactRouterDOM
@@ -39,8 +40,6 @@ export function BookDetails({ onBack }) {
         return dynClass
     }
 
-
-
     const onNextBook = () => {
         bookService.getNextBookId(params.bookId)
             .then((nextBookId) => {
@@ -72,7 +71,10 @@ export function BookDetails({ onBack }) {
             <h3>Page Amount: {book.pageCount}</h3>
 
             <h3>{isVintage}</h3>
-            <p><strong>Description:</strong> {book.description}</p>
+
+            <LongTxt txt={book.description} />
+
+            {/* <p><strong>Description:</strong> {book.description}</p> */}
             <img src={`../assets/img/books/${book.thumbnail}`} alt={`Thumbnail for ${book.title}`} />
             <button onClick={onBack}>Back</button>
 
