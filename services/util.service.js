@@ -6,8 +6,10 @@ export const utilService = {
     saveToStorage,
     padNum,
     getDayName,
-    getMonthName
+    getMonthName, 
+    
 }
+
 
 function makeId(length = 6) {
     var txt = ''

@@ -1,6 +1,6 @@
 // https://www.googleapis.com/books/v1/volumes?printType=books&q=harrypotter
 
-export const getGoogleBooksData = () => {
+export const getGoogleBooksMockData = () => {
 
 
   const data = {
@@ -377,378 +377,435 @@ export const getGoogleBooksData = () => {
       },
       {
         "kind": "books#volume",
-        "id": "1NzAS0KZGV4C",
-        "etag": "lrR/xCSpDb8",
-        "selfLink": "https://www.googleapis.com/books/v1/volumes/1NzAS0KZGV4C",
+        "id": "FKziXsnqLTEC",
+        "etag": "Ato30fTrBlM",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/FKziXsnqLTEC",
         "volumeInfo": {
-          "title": "Heroism in the Harry Potter Series",
-          "authors": [
-            "Katrin Berndt",
-            "Lena Steveker"
-          ],
-          "publisher": "Ashgate Publishing, Ltd.",
-          "publishedDate": "2011",
-          "description": "This collection examines the ways fictional heroism in the twenty-first century challenges the idealized forms of a somewhat simplistic masculinity associated with genres like the epic, romance and classic adventure story. The collection's three sections address broad issues related to genre, Harry Potter's development as the central heroic character and the question of who qualifies as a hero in the Harry Potter series.",
-          "industryIdentifiers": [
-            {
-              "type": "ISBN_10",
-              "identifier": "140941244X"
-            },
-            {
-              "type": "ISBN_13",
-              "identifier": "9781409412441"
-            }
-          ],
-          "readingModes": {
-            "text": true,
-            "image": true
-          },
-          "pageCount": 256,
-          "printType": "BOOK",
-          "categories": [
-            "Literary Criticism"
-          ],
-          "averageRating": 2.5,
-          "ratingsCount": 8,
-          "maturityRating": "NOT_MATURE",
-          "allowAnonLogging": false,
-          "contentVersion": "0.4.7.0.preview.3",
-          "panelizationSummary": {
-            "containsEpubBubbles": false,
-            "containsImageBubbles": false
-          },
-          "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=1NzAS0KZGV4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=1NzAS0KZGV4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-          },
-          "language": "en",
-          "previewLink": "http://books.google.com/books?id=1NzAS0KZGV4C&printsec=frontcover&dq=harrypotter&hl=&as_pt=BOOKS&cd=6&source=gbs_api",
-          "infoLink": "http://books.google.com/books?id=1NzAS0KZGV4C&dq=harrypotter&hl=&as_pt=BOOKS&source=gbs_api",
-          "canonicalVolumeLink": "https://books.google.com/books/about/Heroism_in_the_Harry_Potter_Series.html?hl=&id=1NzAS0KZGV4C"
+        "title": "The Lord of the Rings: The Fellowship of the Ring, The Two Towers, The Return of the King",
+        "authors": [
+        "J. R. R. Tolkien"
+        ],
+        "publisher": "HarperCollins UK",
+        "publishedDate": "2009-04-20",
+        "description": "All three parts of the epic masterpiece The Lord of the Rings – The Fellowship of the Ring, The Two Towers & The Return of the King – available as one download, featuring the definitive edition of the text, hyperlinked footnotes and page references, and 3 maps including a detailed map of Middle-earth.",
+        "industryIdentifiers": [
+        {
+        "type": "ISBN_13",
+        "identifier": "9780007322596"
+        },
+        {
+        "type": "ISBN_10",
+        "identifier": "0007322593"
+        }
+        ],
+        "readingModes": {
+        "text": true,
+        "image": false
+        },
+        "pageCount": 1221,
+        "printType": "BOOK",
+        "categories": [
+        "Fiction"
+        ],
+        "averageRating": 4.5,
+        "ratingsCount": 55,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "3.28.21.0.preview.2",
+        "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+        },
+        "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=FKziXsnqLTEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=FKziXsnqLTEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=FKziXsnqLTEC&printsec=frontcover&dq=lordoftherings&hl=&as_pt=BOOKS&cd=1&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=FKziXsnqLTEC&dq=lordoftherings&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Lord_of_the_Rings_The_Fellowship_of.html?hl=&id=FKziXsnqLTEC"
         },
         "saleInfo": {
-          "country": "IL",
-          "saleability": "NOT_FOR_SALE",
-          "isEbook": false
+        "country": "IL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
         },
         "accessInfo": {
-          "country": "IL",
-          "viewability": "PARTIAL",
-          "embeddable": true,
-          "publicDomain": false,
-          "textToSpeechPermission": "ALLOWED",
-          "epub": {
-            "isAvailable": true,
-            "acsTokenLink": "http://books.google.com/books/download/Heroism_in_the_Harry_Potter_Series-sample-epub.acsm?id=1NzAS0KZGV4C&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
-          },
-          "pdf": {
-            "isAvailable": true,
-            "acsTokenLink": "http://books.google.com/books/download/Heroism_in_the_Harry_Potter_Series-sample-pdf.acsm?id=1NzAS0KZGV4C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
-          },
-          "webReaderLink": "http://play.google.com/books/reader?id=1NzAS0KZGV4C&hl=&as_pt=BOOKS&source=gbs_api",
-          "accessViewStatus": "SAMPLE",
-          "quoteSharingAllowed": false
+        "country": "IL",
+        "viewability": "PARTIAL",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+        "isAvailable": true,
+        "acsTokenLink": "http://books.google.com/books/download/The_Lord_of_the_Rings_The_Fellowship_of-sample-epub.acsm?id=FKziXsnqLTEC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+        "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=FKziXsnqLTEC&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
         },
         "searchInfo": {
-          "textSnippet": "This collection examines the ways fictional heroism in the twenty-first century challenges the idealized forms of a somewhat simplistic masculinity associated with genres like the epic, romance and classic adventure story."
+        "textSnippet": "All three parts of the epic masterpiece The Lord of the Rings – The Fellowship of the Ring, The Two Towers &amp; The Return of the King – available as one download, featuring the definitive edition of the text, hyperlinked footnotes and ..."
         }
-      },
-      {
+        },
+        {
         "kind": "books#volume",
-        "id": "F8npAAAAMAAJ",
-        "etag": "ItAJTq6ovqA",
-        "selfLink": "https://www.googleapis.com/books/v1/volumes/F8npAAAAMAAJ",
+        "id": "GuLZAAAAMAAJ",
+        "etag": "clPCFhfSnHw",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/GuLZAAAAMAAJ",
         "volumeInfo": {
-          "title": "Muggles and Magic",
-          "subtitle": "J.K. Rowling and the Harry Potter Phenomenon",
-          "authors": [
-            "George W. Beahm"
-          ],
-          "publishedDate": "2004",
-          "description": "A treasure trove of information and trivia about Harry Potter, J.K. Rowling's most famous literary creation, and the phenomenon that surrounds him.",
-          "industryIdentifiers": [
-            {
-              "type": "OTHER",
-              "identifier": "PSU:000054702431"
-            }
-          ],
-          "readingModes": {
-            "text": false,
-            "image": false
-          },
-          "pageCount": 440,
-          "printType": "BOOK",
-          "categories": [
-            "Children's stories, English"
-          ],
-          "averageRating": 4,
-          "ratingsCount": 7,
-          "maturityRating": "NOT_MATURE",
-          "allowAnonLogging": false,
-          "contentVersion": "0.5.4.0.preview.0",
-          "panelizationSummary": {
-            "containsEpubBubbles": false,
-            "containsImageBubbles": false
-          },
-          "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=F8npAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=F8npAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-          },
-          "language": "en",
-          "previewLink": "http://books.google.com/books?id=F8npAAAAMAAJ&q=harrypotter&dq=harrypotter&hl=&as_pt=BOOKS&cd=7&source=gbs_api",
-          "infoLink": "http://books.google.com/books?id=F8npAAAAMAAJ&dq=harrypotter&hl=&as_pt=BOOKS&source=gbs_api",
-          "canonicalVolumeLink": "https://books.google.com/books/about/Muggles_and_Magic.html?hl=&id=F8npAAAAMAAJ"
+        "title": "The Lord of the Rings",
+        "authors": [
+        "John Ronald Reuel Tolkien"
+        ],
+        "publisher": "William Morrow",
+        "publishedDate": "2004",
+        "description": "The Fellowship of the Ring, part one of J.R.R. Tolkien's",
+        "industryIdentifiers": [
+        {
+        "type": "OTHER",
+        "identifier": "PSU:000062491532"
+        }
+        ],
+        "readingModes": {
+        "text": false,
+        "image": false
+        },
+        "pageCount": 1200,
+        "printType": "BOOK",
+        "categories": [
+        "Baggins, Frodo (Fictitious character)"
+        ],
+        "averageRating": 4.5,
+        "ratingsCount": 29,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "4.3.2.0.preview.0",
+        "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+        },
+        "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=GuLZAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=GuLZAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=GuLZAAAAMAAJ&q=lordoftherings&dq=lordoftherings&hl=&as_pt=BOOKS&cd=2&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=GuLZAAAAMAAJ&dq=lordoftherings&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Lord_of_the_Rings.html?hl=&id=GuLZAAAAMAAJ"
         },
         "saleInfo": {
-          "country": "IL",
-          "saleability": "NOT_FOR_SALE",
-          "isEbook": false
+        "country": "IL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
         },
         "accessInfo": {
-          "country": "IL",
-          "viewability": "NO_PAGES",
-          "embeddable": false,
-          "publicDomain": false,
-          "textToSpeechPermission": "ALLOWED",
-          "epub": {
-            "isAvailable": false
-          },
-          "pdf": {
-            "isAvailable": false
-          },
-          "webReaderLink": "http://play.google.com/books/reader?id=F8npAAAAMAAJ&hl=&as_pt=BOOKS&source=gbs_api",
-          "accessViewStatus": "NONE",
-          "quoteSharingAllowed": false
+        "country": "IL",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+        "isAvailable": false
+        },
+        "pdf": {
+        "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=GuLZAAAAMAAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
         },
         "searchInfo": {
-          "textSnippet": "A treasure trove of information and trivia about Harry Potter, J.K. Rowling&#39;s most famous literary creation, and the phenomenon that surrounds him."
+        "textSnippet": "&quot; The text is fully correctedQunder the supervision of Christopher TolkienQto meet the author&#39;s exacting wishes, and includes two large-format fold-out maps, a ribbon placemarker, and exceptionally elegant packaging. 0-618-51765-0$100.00 / ..."
         }
-      },
-      {
+        },
+        {
         "kind": "books#volume",
-        "id": "7JnvDwAAQBAJ",
-        "etag": "eqr9fnjZeyI",
-        "selfLink": "https://www.googleapis.com/books/v1/volumes/7JnvDwAAQBAJ",
+        "id": "u18qAQAAIAAJ",
+        "etag": "4KpBBHlPL/g",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/u18qAQAAIAAJ",
         "volumeInfo": {
-          "title": "Harry Potter Film Vault: Forest, Lake, and Sky Creatures",
-          "authors": [
-            "Insight Editions"
-          ],
-          "publisher": "Simon and Schuster",
-          "publishedDate": "2020-11-24",
-          "description": "An insider’s look at how artists and creature designers brought Thestrals, Grindylows, Acromantula, dragons, and more to cinematic life. From centaurs to merpeople and horn-tailed dragons, magical creatures and terrifying beasts are key characters in the Harry Potter films. Harry Potter Film Vault: Volume 1: Forest, Lake, and Sky Creatures features illustrations and behind-the-scenes photography that give fans an in-depth look at the development and creation of the magnificent creatures seen throughout the movies. The Film Vault compiles the filmmaking secrets and visionary artistry behind the Harry Potter films into a series of twelve deluxe collectible volumes. Intricately designed and packed with gorgeous concept art and unit photography from the Warner Bros. archive, each volume in the series gives fans striking insights about bringing the Wizarding World to the big screen. Praise for the Harry Potter Film Vault series “A detailed, behind-the-scenes look at creating some aspect of the wizarding world for the films.” —The Leaky Cauldron “These are great! They’re gorgeous, and because they break down the different aspects of the films into twelve volumes, they may have more detail than some of the other compendiums out there . . . these might just be my new favorite Potter film books.” —MuggleNet “[A] super cool behind the scenes series of the Harry Potter films . . . Twelve volumes that take the viewer on distinct adventures that unveil various aspects of the beloved movies.” —Apartment Therapy “You’re going to want to collect them all.” —Wizards and Whatnot",
-          "industryIdentifiers": [
-            {
-              "type": "ISBN_13",
-              "identifier": "9781647223151"
-            },
-            {
-              "type": "ISBN_10",
-              "identifier": "1647223156"
-            }
-          ],
-          "readingModes": {
-            "text": true,
-            "image": true
-          },
-          "pageCount": 70,
-          "printType": "BOOK",
-          "categories": [
-            "Performing Arts"
-          ],
-          "maturityRating": "NOT_MATURE",
-          "allowAnonLogging": true,
-          "contentVersion": "3.6.3.0.preview.3",
-          "panelizationSummary": {
-            "containsEpubBubbles": false,
-            "containsImageBubbles": false
-          },
-          "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=7JnvDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=7JnvDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-          },
-          "language": "en",
-          "previewLink": "http://books.google.com/books?id=7JnvDwAAQBAJ&printsec=frontcover&dq=harrypotter&hl=&as_pt=BOOKS&cd=8&source=gbs_api",
-          "infoLink": "http://books.google.com/books?id=7JnvDwAAQBAJ&dq=harrypotter&hl=&as_pt=BOOKS&source=gbs_api",
-          "canonicalVolumeLink": "https://books.google.com/books/about/Harry_Potter_Film_Vault_Forest_Lake_and.html?hl=&id=7JnvDwAAQBAJ"
+        "title": "J.R.R. Tolkien's The Lord of the Rings",
+        "authors": [
+        "Harold Bloom"
+        ],
+        "publisher": "Chelsea House",
+        "publishedDate": "2008",
+        "description": "This book, a collection of contemporary criticism on J.R.R. Tolkien's",
+        "industryIdentifiers": [
+        {
+        "type": "OTHER",
+        "identifier": "UCSC:32106019989547"
+        }
+        ],
+        "readingModes": {
+        "text": false,
+        "image": false
+        },
+        "pageCount": 224,
+        "printType": "BOOK",
+        "categories": [
+        "Fantasy fiction, English"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.4.1.0.preview.0",
+        "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+        },
+        "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=u18qAQAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=u18qAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=u18qAQAAIAAJ&q=lordoftherings&dq=lordoftherings&hl=&as_pt=BOOKS&cd=3&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=u18qAQAAIAAJ&dq=lordoftherings&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/J_R_R_Tolkien_s_The_Lord_of_the_Rings.html?hl=&id=u18qAQAAIAAJ"
         },
         "saleInfo": {
-          "country": "IL",
-          "saleability": "NOT_FOR_SALE",
-          "isEbook": false
+        "country": "IL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
         },
         "accessInfo": {
-          "country": "IL",
-          "viewability": "PARTIAL",
-          "embeddable": true,
-          "publicDomain": false,
-          "textToSpeechPermission": "ALLOWED",
-          "epub": {
-            "isAvailable": true,
-            "acsTokenLink": "http://books.google.com/books/download/Harry_Potter_Film_Vault_Forest_Lake_and-sample-epub.acsm?id=7JnvDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
-          },
-          "pdf": {
-            "isAvailable": true,
-            "acsTokenLink": "http://books.google.com/books/download/Harry_Potter_Film_Vault_Forest_Lake_and-sample-pdf.acsm?id=7JnvDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
-          },
-          "webReaderLink": "http://play.google.com/books/reader?id=7JnvDwAAQBAJ&hl=&as_pt=BOOKS&source=gbs_api",
-          "accessViewStatus": "SAMPLE",
-          "quoteSharingAllowed": false
+        "country": "IL",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+        "isAvailable": false
+        },
+        "pdf": {
+        "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=u18qAQAAIAAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
         },
         "searchInfo": {
-          "textSnippet": "Intricately designed and packed with gorgeous concept art and unit photography from the Warner Bros. archive, each volume in the series gives fans striking insights about bringing the Wizarding World to the big screen."
+        "textSnippet": "This book, a collection of contemporary criticism on J.R.R. Tolkien&#39;s &quot;The Lord of the Rings,&quot; contains essays by Michael Moorcock, Jane Chance, Michael N. Stanton, Mark T. Hooker, Jared Lobdell, Marjorie Burns, Andrew Lynch, Sue Zlosnik, ..."
         }
-      },
-      {
+        },
+        {
         "kind": "books#volume",
-        "id": "DQQhCwAAQBAJ",
-        "etag": "HBIEbUKINXA",
-        "selfLink": "https://www.googleapis.com/books/v1/volumes/DQQhCwAAQBAJ",
+        "id": "Dw-NAgAAQBAJ",
+        "etag": "4n0Xxz9MKr0",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/Dw-NAgAAQBAJ",
         "volumeInfo": {
-          "title": "Harry Potter and the Chamber of Secrets",
-          "authors": [
-            "J.K. Rowling"
-          ],
-          "publisher": "Pottermore Publishing",
-          "publishedDate": "2015-12-08",
-          "description": "'There is a plot, Harry Potter. A plot to make most terrible things happen at Hogwarts School of Witchcraft and Wizardry this year.' Harry Potter's summer has included the worst birthday ever, doomy warnings from a house-elf called Dobby, and rescue from the Dursleys by his friend Ron Weasley in a magical flying car! Back at Hogwarts School of Witchcraft and Wizardry for his second year, Harry hears strange whispers echo through empty corridors - and then the attacks start. Students are found as though turned to stone... Dobby's sinister predictions seem to be coming true. Having become classics of our time, the Harry Potter eBooks never fail to bring comfort and escapism. With their message of hope, belonging and the enduring power of truth and love, the story of the Boy Who Lived continues to delight generations of new readers.",
-          "industryIdentifiers": [
-            {
-              "type": "ISBN_13",
-              "identifier": "9781781100509"
-            },
-            {
-              "type": "ISBN_10",
-              "identifier": "1781100500"
-            }
-          ],
-          "readingModes": {
-            "text": true,
-            "image": false
-          },
-          "pageCount": 325,
-          "printType": "BOOK",
-          "categories": [
-            "Fiction"
-          ],
-          "maturityRating": "NOT_MATURE",
-          "allowAnonLogging": false,
-          "contentVersion": "1.3.4.0.preview.2",
-          "panelizationSummary": {
-            "containsEpubBubbles": false,
-            "containsImageBubbles": false
-          },
-          "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=DQQhCwAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=DQQhCwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-          },
-          "language": "en",
-          "previewLink": "http://books.google.com/books?id=DQQhCwAAQBAJ&dq=harrypotter&hl=&as_pt=BOOKS&cd=9&source=gbs_api",
-          "infoLink": "http://books.google.com/books?id=DQQhCwAAQBAJ&dq=harrypotter&hl=&as_pt=BOOKS&source=gbs_api",
-          "canonicalVolumeLink": "https://books.google.com/books/about/Harry_Potter_and_the_Chamber_of_Secrets.html?hl=&id=DQQhCwAAQBAJ"
+        "title": "The Lord of the Rings and Philosophy",
+        "subtitle": "One Book to Rule Them All",
+        "authors": [
+        "Gregory Bassham",
+        "Eric Bronson"
+        ],
+        "publisher": "Open Court",
+        "publishedDate": "2013-11-13",
+        "description": "The Lord of the Rings is intended to be applicable to the real world of relationships, religion, pleasure, pain, and politics. Tolkien himself said that his grand tale of wizards, orcs, hobbits, and elves was aimed at truth and good morals in the actual world. Analysis of the popular appeal of The Lord of the Rings (on websites and elsewhere) shows that Tolkien fans are hungry for discussion of the urgent moral and cosmological issues arising out of this fantastic epic story. Can political power be wielded for good, or must it always corrupt? Does technology destroy the truly human? Is it morally wrong to give up hope? Can we find meaning in chance events? In The Lord of the Rings and Philosophy, seventeen young philosophy professors, all of them ardent Tolkien fans and most of them contributors to the four earlier volumes in the Popular Culture and Philosophy series, address some of these important issues and show how clues to their solutions may be found in the imaginary world of Middle-earth. The book is divided into five sections, concerned with Power and the Ring, the Quest for Happiness, Good and Evil in Middle-earth, Time and Mortality, and the Relevance",
+        "industryIdentifiers": [
+        {
+        "type": "ISBN_13",
+        "identifier": "9780812698060"
+        },
+        {
+        "type": "ISBN_10",
+        "identifier": "0812698061"
+        }
+        ],
+        "readingModes": {
+        "text": true,
+        "image": true
+        },
+        "pageCount": 336,
+        "printType": "BOOK",
+        "categories": [
+        "Philosophy"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "0.5.5.0.preview.3",
+        "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+        },
+        "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=Dw-NAgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=Dw-NAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=Dw-NAgAAQBAJ&printsec=frontcover&dq=lordoftherings&hl=&as_pt=BOOKS&cd=4&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=Dw-NAgAAQBAJ&dq=lordoftherings&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Lord_of_the_Rings_and_Philosophy.html?hl=&id=Dw-NAgAAQBAJ"
         },
         "saleInfo": {
-          "country": "IL",
-          "saleability": "NOT_FOR_SALE",
-          "isEbook": false
+        "country": "IL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
         },
         "accessInfo": {
-          "country": "IL",
-          "viewability": "NO_PAGES",
-          "embeddable": false,
-          "publicDomain": false,
-          "textToSpeechPermission": "ALLOWED",
-          "epub": {
-            "isAvailable": true
-          },
-          "pdf": {
-            "isAvailable": true
-          },
-          "webReaderLink": "http://play.google.com/books/reader?id=DQQhCwAAQBAJ&hl=&as_pt=BOOKS&source=gbs_api",
-          "accessViewStatus": "NONE",
-          "quoteSharingAllowed": false
+        "country": "IL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+        "isAvailable": true,
+        "acsTokenLink": "http://books.google.com/books/download/The_Lord_of_the_Rings_and_Philosophy-sample-epub.acsm?id=Dw-NAgAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+        "isAvailable": true,
+        "acsTokenLink": "http://books.google.com/books/download/The_Lord_of_the_Rings_and_Philosophy-sample-pdf.acsm?id=Dw-NAgAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=Dw-NAgAAQBAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
         },
         "searchInfo": {
-          "textSnippet": "With their message of hope, belonging and the enduring power of truth and love, the story of the Boy Who Lived continues to delight generations of new readers."
+        "textSnippet": "The book is divided into five sections, concerned with Power and the Ring, the Quest for Happiness, Good and Evil in Middle-earth, Time and Mortality, and the Relevance"
         }
-      },
-      {
+        },
+        {
         "kind": "books#volume",
-        "id": "gal9MtXKC68C",
-        "etag": "NMA1Op9jhqA",
-        "selfLink": "https://www.googleapis.com/books/v1/volumes/gal9MtXKC68C",
+        "id": "8NjFAQAACAAJ",
+        "etag": "1L0mCWctPVQ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/8NjFAQAACAAJ",
         "volumeInfo": {
-          "title": "‏هيرى پوٹر اور رازوں کا کمره :‏",
-          "subtitle": "‏جے. کے. رولنگ، کى شهرۀ آفاق کهانى کا اردو ترجمه /‏",
-          "authors": [
-            "J. K. Rowling"
-          ],
-          "publisher": "Oxford University Press, USA",
-          "publishedDate": "2004",
-          "description": "An Urdu language edition of the second Harry Potter tale.",
-          "industryIdentifiers": [
-            {
-              "type": "ISBN_10",
-              "identifier": "0195798767"
-            },
-            {
-              "type": "ISBN_13",
-              "identifier": "9780195798760"
-            }
-          ],
-          "readingModes": {
-            "text": false,
-            "image": true
-          },
-          "pageCount": 314,
-          "printType": "BOOK",
-          "categories": [
-            "England"
-          ],
-          "averageRating": 4,
-          "ratingsCount": 46,
-          "maturityRating": "NOT_MATURE",
-          "allowAnonLogging": false,
-          "contentVersion": "0.4.4.0.preview.1",
-          "panelizationSummary": {
-            "containsEpubBubbles": false,
-            "containsImageBubbles": false
-          },
-          "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=gal9MtXKC68C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=gal9MtXKC68C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-          },
-          "language": "ur",
-          "previewLink": "http://books.google.com/books?id=gal9MtXKC68C&printsec=frontcover&dq=harrypotter&hl=&as_pt=BOOKS&cd=10&source=gbs_api",
-          "infoLink": "http://books.google.com/books?id=gal9MtXKC68C&dq=harrypotter&hl=&as_pt=BOOKS&source=gbs_api",
-          "canonicalVolumeLink": "https://books.google.com/books/about/%D9%87%D9%8A%D8%B1%D9%89_%D9%BE%D9%88%D9%B9%D8%B1_%D8%A7%D9%88%D8%B1_%D8%B1%D8%A7%D8%B2%D9%88%DA%BA_%DA%A9%D8%A7.html?hl=&id=gal9MtXKC68C"
+        "title": "The Lord of the Rings",
+        "authors": [
+        "J. R. R. Tolkien"
+        ],
+        "publisher": "Houghton Mifflin",
+        "publishedDate": "2003-11",
+        "industryIdentifiers": [
+        {
+        "type": "ISBN_10",
+        "identifier": "0618433228"
+        },
+        {
+        "type": "ISBN_13",
+        "identifier": "9780618433223"
+        }
+        ],
+        "readingModes": {
+        "text": false,
+        "image": false
+        },
+        "pageCount": 0,
+        "printType": "BOOK",
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=8NjFAQAACAAJ&dq=lordoftherings&hl=&as_pt=BOOKS&cd=5&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=8NjFAQAACAAJ&dq=lordoftherings&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Lord_of_the_Rings.html?hl=&id=8NjFAQAACAAJ"
         },
         "saleInfo": {
-          "country": "IL",
-          "saleability": "NOT_FOR_SALE",
-          "isEbook": false
+        "country": "IL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
         },
         "accessInfo": {
-          "country": "IL",
-          "viewability": "PARTIAL",
-          "embeddable": true,
-          "publicDomain": false,
-          "textToSpeechPermission": "ALLOWED",
-          "epub": {
-            "isAvailable": false
-          },
-          "pdf": {
-            "isAvailable": true,
-            "acsTokenLink": "http://books.google.com/books/download/%D9%87%D9%8A%D8%B1%D9%89_%D9%BE%D9%88%D9%B9%D8%B1_%D8%A7%D9%88%D8%B1_%D8%B1%D8%A7%D8%B2%D9%88%DA%BA_%DA%A9%D8%A7-sample-pdf.acsm?id=gal9MtXKC68C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
-          },
-          "webReaderLink": "http://play.google.com/books/reader?id=gal9MtXKC68C&hl=&as_pt=BOOKS&source=gbs_api",
-          "accessViewStatus": "SAMPLE",
-          "quoteSharingAllowed": false
+        "country": "IL",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+        "isAvailable": false
+        },
+        "pdf": {
+        "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=8NjFAQAACAAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+        }
+        },
+        {
+        "kind": "books#volume",
+        "id": "xFr92V2k3PIC",
+        "etag": "RMOBGgPbXIk",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/xFr92V2k3PIC",
+        "volumeInfo": {
+        "title": "The Fellowship of the Ring (The Lord of the Rings, Book 1)",
+        "authors": [
+        "J. R. R. Tolkien"
+        ],
+        "publisher": "HarperCollins UK",
+        "publishedDate": "2009-04-20",
+        "description": "The first part of J. R. R. Tolkien’s epic adventure THE LORD OF THE RINGS ‘A most remarkable feat’ Guardian",
+        "industryIdentifiers": [
+        {
+        "type": "ISBN_13",
+        "identifier": "9780007322497"
+        },
+        {
+        "type": "ISBN_10",
+        "identifier": "0007322496"
+        }
+        ],
+        "readingModes": {
+        "text": true,
+        "image": false
+        },
+        "pageCount": 442,
+        "printType": "BOOK",
+        "categories": [
+        "Fiction"
+        ],
+        "averageRating": 4.5,
+        "ratingsCount": 13,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "2.20.22.0.preview.2",
+        "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+        },
+        "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=xFr92V2k3PIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=xFr92V2k3PIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=xFr92V2k3PIC&printsec=frontcover&dq=lordoftherings&hl=&as_pt=BOOKS&cd=6&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=xFr92V2k3PIC&dq=lordoftherings&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Fellowship_of_the_Ring_The_Lord_of_t.html?hl=&id=xFr92V2k3PIC"
+        },
+        "saleInfo": {
+        "country": "IL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+        },
+        "accessInfo": {
+        "country": "IL",
+        "viewability": "PARTIAL",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+        "isAvailable": true,
+        "acsTokenLink": "http://books.google.com/books/download/The_Fellowship_of_the_Ring_The_Lord_of_t-sample-epub.acsm?id=xFr92V2k3PIC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+        "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=xFr92V2k3PIC&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
         },
         "searchInfo": {
-          "textSnippet": "An Urdu language edition of the second Harry Potter tale."
+        "textSnippet": "The first part of J. R. R. Tolkien’s epic adventure THE LORD OF THE RINGS ‘A most remarkable feat’ Guardian"
         }
-      }
+        },
     ]
   }
 

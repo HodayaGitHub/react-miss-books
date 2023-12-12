@@ -20,6 +20,7 @@ export const bookService = {
     getEmptyReview,
     getSiblingBookId,
     addGoogleBook,
+    getGoogleBooks,
 }
 
 _createBooksFromJson()
@@ -46,12 +47,26 @@ function addGoogleBook(item) {
     }
 
     return save(googleBookInfo)
-    
+
     // console.log(googleBookInfo)
 }
 
 
+function getGoogleBooks(queryParam) {
+    const url = `https://www.googleapis.com/books/v1/volumes?printType=books&q=${queryParam}`
 
+
+    return axios.get(url)
+        .then(res => res.data)
+        .then(books => {
+            console.log('Axios!');
+            // saveToStorage(STORAGE_KEY_CITIES, cities)
+            // setTimeout(() => {
+                // saveToStorage(STORAGE_KEY_CITIES, null)
+            // }, 10000)
+            return books
+        })
+}
 
 
 function getEmptyBook() {

@@ -75,9 +75,9 @@ export function BookEdit() {
       onSubmitBook={onSubmitBook}
       handlePriceChange={handlePriceChange}
       onBack={onBack}
-      handleChange={handleChange}
-      bookToAdd={bookToAdd}
-      setBookToAdd={setBookToAdd}
+      // handleChange={handleChange}
+      // bookToAdd={bookToAdd}
+      // setBookToAdd={setBookToAdd}
     />
 
 
