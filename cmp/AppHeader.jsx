@@ -7,7 +7,7 @@ export function AppHeader() {
                 <h1>React Books App</h1>
                 <nav className="app-nav">
                     <NavLink to="/" >Home</NavLink>
-                    <NavLink to="/books" >Books</NavLink>
+                    <NavLink to="/book" >Books</NavLink>
                     <NavLink to="/about" >About</NavLink>
                 </nav>
             </section>

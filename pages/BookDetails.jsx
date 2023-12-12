@@ -21,12 +21,12 @@ export function BookDetails({ onBack }) {
             .then(book => setBook(book))
             .catch(err => {
                 console.log('err:', err)
-                navigate('/books')
+                navigate('/book')
             })
     }
 
     function onBack() {
-        navigate('/books')
+        navigate('/book')
     }
 
     function isExpensive() {
@@ -44,11 +44,11 @@ export function BookDetails({ onBack }) {
     const onNextBook = () => {
         bookService.getNextBookId(params.bookId)
             .then((nextBookId) => {
-                navigate(`/books/${nextBookId}`)
+                navigate(`/book/${nextBookId}`)
             })
             .catch((err) => {
                 console.error("Error getting next book ID:", err)
-                navigate('/books')
+                navigate('/book')
             })
     }
 
@@ -73,7 +73,7 @@ export function BookDetails({ onBack }) {
 
             <h3>{isVintage}</h3>
             <p><strong>Description:</strong> {book.description}</p>
-            <img src={`../assets/img/books/${book.thumbnail}`} alt={`Thumbnail for ${book.title}`} />
+            <img src={`../assets/img/book/${book.thumbnail}`} alt={`Thumbnail for ${book.title}`} />
             <button onClick={onBack}>Back</button>
 
             <button onClick={onNextBook}>

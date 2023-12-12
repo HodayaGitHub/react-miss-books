@@ -23,13 +23,13 @@ export function App() {
 
                     <Routes>
                         <Route path="/" element={<HomePage />} />
-                        <Route path="/books" element={<BookIndex />} />
-                        <Route path="/books/:bookId" element={<BookDetails />} />
+                        <Route path="/book" element={<BookIndex />} />
+                        <Route path="/book/:bookId" element={<BookDetails />} />
                         <Route path="/about" element={<AboutUs />}>
                             <Route path="team" element={<AboutTeam />} />
                             <Route path="goal" element={<AboutGoal />} />
                         </Route>
-                        <Route path="/books/edit" element={<BookEdit />} />
+                        <Route path="/book/edit" element={<BookEdit />} />
                     </Routes>
 
                 </main>

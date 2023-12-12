@@ -46,7 +46,7 @@ export function BookEdit() {
         ev.preventDefault()
         bookService.save(bookToEdit)
             .then(() => {
-                navigate('/books')
+                navigate('/book')
                 showSuccessMsg(`Book successfully added! ${bookToEdit.title}`)
 
             })
