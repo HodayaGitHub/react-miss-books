@@ -1,74 +1,140 @@
-import { bookService } from "../services/book.service.js"
-const { useNavigate, useParams } = ReactRouterDOM
-const { useState, useEffect } = React
+import { AddBook } from '../cmp/AddBook.jsx'
+import { bookService } from '../services/book.service.js'
+import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
 
+const { useState, useEffect } = React
+const { useNavigate, useParams } = ReactRouterDOM
 
 export function BookEdit() {
-    const [bookToEdit, setBookToEdit] = useState(bookService.getEmptyBook())
-    // console.log('bookToEdit:', bookToEdit)
-    const navigate = useNavigate()
-    const params = useParams()
+  const [bookToAdd, setBookToAdd] = useState(bookService.getEmptyBook())
+  const navigate = useNavigate()
+  const params = useParams()
+  console.log(bookToAdd)
+  useEffect(() => {
+    if (params.bookId) loadBook()
+  }, [])
 
-    useEffect(() => {
-        if (params.bookId) {
-            loadBook()
-        }
-    }, [])
+  function loadBook() {
+    bookService
+      .get(params.bookId)
+      .then(setBookToAdd)
+      .catch(err => console.log('err:', err))
+  }
 
-    function loadBook() {
-        bookService.get(params.bookId)
-            .then(setBookToEdit)
-            .catch(err => console.log('err:', err))
+  function handleChange({ target }) {
+    const field = target.name
+    let value = target.value
+
+    if (field === 'categories' || field === 'authors') value = [value]
+
+    switch (target.type) {
+      case 'number':
+      case 'range':
+        value = +value || ''
+        break
+
+      case 'checkbox':
+        value = target.checked
+        break
+
+      default:
+        break
     }
 
-    function handleChange({ target }) {
-        const field = target.name
-        let value = target.value
+    setBookToAdd(prevBookToAdd => ({ ...prevBookToAdd, [field]: value }))
+  }
 
-        switch (target.type) {
-            case 'number':
-            case 'range':
-                value = +value
-                break
+  function handlePriceChange({ target }) {
+    let value = +target.value
+    const listPrice = { ...bookToAdd.listPrice, amount: value }
+    setBookToAdd(prevBookToAdd => ({ ...prevBookToAdd, listPrice }))
+  }
 
-            case 'checkbox':
-                value = target.checked
-                break
+  function onSubmitBook(ev) {
+    ev.preventDefault()
+    bookService
+      .save(bookToAdd)
+      .then(() => {
+        showSuccessMsg(`Book saved successfully`)
+        navigate('/book')
+      })
+      .catch(err => {
+        console.log('err:', err)
+        showErrorMsg("Couldn't save book")
+      })
+  }
 
-            default:
-                break
-        }
+  function onBack() {
+    navigate('/book')
+  }
 
-        setBookToEdit(prevBook => ({ ...prevBook, [field]: value }))
-    }
+  const pageTitle = params.bookId ? 'Edit Book' : 'Add a New Book'
 
-    function onSaveBook(ev) {
-        ev.preventDefault()
-        bookService.save(bookToEdit)
-            .then(() => {
-                navigate('/book')
-                showSuccessMsg(`Book successfully added! ${bookToEdit.title}`)
+  return (
+    <AddBook
+      onSubmitBook={onSubmitBook}
+      handlePriceChange={handlePriceChange}
+      onBack={onBack}
+      handleChange={handleChange}
+      bookToAdd={bookToAdd}
+      setBookToAdd={setBookToAdd}
+    />
 
-            })
 
-            .catch(err => console.log('err:', err))
-    }
 
-    const { title, minPrice } = bookToEdit
 
-    return (
-        <section className="book-edit">
 
-            <h1>Add Book</h1>
-            <form onSubmit={onSaveBook}>
-                <label htmlFor="title">Title</label>
-                <input onChange={handleChange} value={title} type="text" name="title" id="title" />
 
-                <label htmlFor="price">Price</label>
-                <input onChange={handleChange} value={minPrice} type="number" name="price" id="price" />
-                <button disabled={!title}>Save</button>
-            </form>
 
-        </section>
-    )
+
+
+
+
+
+
+
+
+
+    // <section className='add-book'>
+    //   <h2>{pageTitle}</h2>
+    //   <form onSubmit={onSubmitBook}>
+    //     <label htmlFor='title'>Title: </label>
+    //     <input
+    //       value={bookToAdd.title}
+    //       onChange={handleChange}
+    //       type='text'
+    //       placeholder='Title'
+    //       id='title'
+    //       name='title'
+    //       required
+    //     />
+
+    //     <label htmlFor='subtitle'>Subtitle:</label>
+    //     <input
+    //       value={bookToAdd.subtitle}
+    //       onChange={handleChange}
+    //       type='text'
+    //       placeholder='Subtitle'
+    //       id='subtitle'
+    //       name='subtitle'
+    //       required
+    //     />
+
+
+    //     <label htmlFor='price'>Price: </label>
+    //     <input
+    //       value={bookToAdd.listPrice.amount || 0}
+    //       onChange={handlePriceChange}
+    //       type='number'
+    //       placeholder='price'
+    //       id='price'
+    //       name='price'
+    //       required
+    //     />
+
+    //     <button>Save</button>
+    //   </form>
+    //   <button onClick={onBack}>Back</button>
+    // </section>
+  )
 }

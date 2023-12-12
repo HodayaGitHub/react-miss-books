@@ -12,7 +12,6 @@ export const bookService = {
     remove,
     save,
     getEmptyBook,
-    // getNextBookId,
     getFilterBy,
     setFilterBy,
     getDefaultFilter,
@@ -20,10 +19,51 @@ export const bookService = {
     removeReview,
     getEmptyReview,
     getSiblingBookId,
+    addGoogleBook,
 }
 
 _createBooksFromJson()
-// _createBooks()
+
+function addGoogleBook(item) {
+    const bookInfo = item.volumeInfo
+    const googleBookInfo = {
+        title: bookInfo.title,
+        subtitle: bookInfo.subtitle || '',
+        authors: bookInfo.authors || [],
+        publishedDate: bookInfo.publishedDate || 'Unknown publish date',
+        description: bookInfo.description || '',
+        pageCount: bookInfo.pageCount || 0,
+        categories: bookInfo.categories || [],
+        thumbnail: bookInfo.imageLinks ? item.volumeInfo.imageLinks.thumbnail : '../assets/imgs/error.jpg',
+        language: bookInfo.language || 'en',
+        listPrice: {
+            amount: item.saleInfo && item.saleInfo.listPrice ? item.saleInfo.listPrice.amount : 0,
+            currencyCode: item.saleInfo && item.saleInfo.listPrice ? item.saleInfo.listPrice.currencyCode : 'EUR',
+            isOnSale: item.saleInfo && item.saleInfo.saleability === 'FOR_SALE',
+        },
+    }
+    
+    console.log(googleBookInfo)
+}
+
+function getEmptyBook() {
+    return {
+        title: '',
+        subtitle: '',
+        authors: [],
+        publishedDate: 1900,
+        description: '',
+        pageCount: 0,
+        categories: [],
+        thumbnail: '../assets/imgs/20.jpg',
+        language: 'en',
+        listPrice: {
+            amount: 0,
+            currencyCode: 'EUR',
+            isOnSale: false,
+        },
+    }
+}
 
 
 function _createBooksFromJson() {
@@ -36,13 +76,14 @@ function _createBooksFromJson() {
 }
 
 
+
 function getDefaultFilter() {
     return { txt: '', minPrice: '' }
 }
 
-function getEmptyBook(title = '', price = '') {
-    return { title, price }
-}
+// function getEmptyBook(title = '', price = '') {
+//     return { title, price }
+// }
 
 function getEmptyReview() {
     return {
@@ -92,15 +133,6 @@ function setFilterBy(filterBy = {}) {
     return gFilterBy
 }
 
-// function getNextBookId(bookId) {
-//     return storageService.query(BOOK_KEY)
-//         .then(books => {
-//             let nextBookIdx = books.findIndex(book => book.id === bookId) + 1
-//             if (nextBookIdx === books.length) nextBookIdx = 0
-//             return books[nextBookIdx].id
-//         })
-// }
-
 
 function getSiblingBookId(bookId, direction) {
     return storageService.query(BOOK_KEY)
@@ -124,6 +156,9 @@ function getSiblingBookId(bookId, direction) {
             return books[SiblingBookIdx].id
         })
 }
+
+
+
 
 
 
