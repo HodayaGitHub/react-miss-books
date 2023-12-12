@@ -16,6 +16,8 @@ export const bookService = {
     getFilterBy,
     setFilterBy,
     getDefaultFilter,
+    addReview,
+    removeReview,
 }
 
 _createBooksFromJson()
@@ -87,6 +89,27 @@ function getNextBookId(bookId) {
             return books[nextBookIdx].id
         })
 }
+
+
+function addReview(bookId, review) {
+
+    review.id = utilService.makeId()
+    return get(bookId)
+        .then(book => {
+            if (book.reviews) book.reviews.push(review)
+            else book.reviews = [review]
+            return book
+        })
+        .then(book => storageService.put(BOOKS_KEY, book))
+}
+
+function removeReview(bookId, reviewId) {
+    return get(bookId).then(book => {
+        book.reviews = book.reviews.filter(review => review.id !== reviewId)
+        return storageService.put(BOOKS_KEY, book)
+    })
+}
+
 
 // function _createBook(title, maxPrice = 250) {
 //     const book = getEmptyBook(title, maxPrice)

@@ -1,4 +1,6 @@
 import { bookService } from "../services/book.service.js"
+import { AddReview } from '../cmp/AddReview.jsx'
+import { ReviewList } from '../cmp/ReviewList.jsx'
 import { LongTxt } from "../cmp/LongTxt.jsx"
 
 const { useState, useEffect } = React
@@ -40,6 +42,36 @@ export function BookDetails({ onBack }) {
         return dynClass
     }
 
+    function onAddReview(reviewToAdd) {
+        console.log('review to add', reviewToAdd);
+        bookService.addReview(bookId, reviewToAdd)
+            .then(updatedBook => {
+                setBook(updatedBook)
+                setIsReview(false)
+                showSuccessMsg('Review saved successfully')
+            })
+            .catch(err => {
+                console.log('err:', err)
+                showErrorMsg('Error saving review')
+            })
+    }
+
+    function onRemoveReview(reviewId) {
+        bookService
+            .removeReview(bookId, reviewId)
+            .then(savedBook => {
+                setBook(savedBook)
+                showSuccessMsg('Review deleted successfully')
+            })
+            .catch(err => {
+                console.log('err:', err)
+                showErrorMsg('Error deleting review')
+                navigate('/book')
+            })
+    }
+
+
+
     const onNextBook = () => {
         bookService.getNextBookId(params.bookId)
             .then((nextBookId) => {
@@ -76,6 +108,17 @@ export function BookDetails({ onBack }) {
 
             {/* <p><strong>Description:</strong> {book.description}</p> */}
             <img src={`../assets/img/books/${book.thumbnail}`} alt={`Thumbnail for ${book.title}`} />
+
+            <button onClick={() => setIsReview(!isReview)}>Add Review</button>
+            {isReview && <AddReview onAddReview={onAddReview} />}
+            <section className='reviews'>
+                <h4>Reviews:</h4>
+                {(book.reviews && book.reviews.length && (
+                    <ReviewList reviews={book.reviews} onRemoveReview={onRemoveReview} />
+                )) ||
+                    'No Reviews'}
+            </section>
+
             <button onClick={onBack}>Back</button>
 
             <button onClick={onNextBook}>
