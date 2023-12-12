@@ -8,6 +8,14 @@
 .book-item {
     padding: 16px;
     border: 1px solid #ddd;
-    /* display: grid;
-    justify-content: space-around; */
+    display: grid;
+    grid-auto-rows: minmax(100px, auto);
+    /* justify-content: space-around; */ 
+    /* grid-template-columns: 200px 200px 200px; */
+
+}
+
+
+.book-item img {
+height: 80%;
 }
