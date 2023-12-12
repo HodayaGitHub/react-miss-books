@@ -1,6 +1,9 @@
 // https://www.googleapis.com/books/v1/volumes?printType=books&q=harrypotter
 
-export const GoogleBooks = {
+export const getGoogleBooksData = () => {
+
+
+  const data = {
     "kind": "books#volumes",
     "totalItems": 334,
     "items": [
@@ -748,3 +751,8 @@ export const GoogleBooks = {
       }
     ]
   }
+
+  
+  return Promise.resolve(data)
+
+}

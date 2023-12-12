@@ -1,0 +1,15 @@
+.search-list {}
+
+
+.drop-down-list {
+    margin-left: 40px;
+    max-width: 350px;
+    background-color: antiquewhite;
+}
+
+.search-list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background-color: red; */
+}

@@ -25,26 +25,34 @@ export const bookService = {
 _createBooksFromJson()
 
 function addGoogleBook(item) {
-    const bookInfo = item.volumeInfo
+    console.log('item', item)
+    // const bookInfo = item.volumeInfo
     const googleBookInfo = {
-        title: bookInfo.title,
-        subtitle: bookInfo.subtitle || '',
-        authors: bookInfo.authors || [],
-        publishedDate: bookInfo.publishedDate || 'Unknown publish date',
-        description: bookInfo.description || '',
-        pageCount: bookInfo.pageCount || 0,
-        categories: bookInfo.categories || [],
-        thumbnail: bookInfo.imageLinks ? item.volumeInfo.imageLinks.thumbnail : '../assets/imgs/error.jpg',
-        language: bookInfo.language || 'en',
+        // id: item.id,
+        title: item.volumeInfo.title,
+        subtitle: item.volumeInfo.subtitle || '',
+        authors: item.volumeInfo.authors || [],
+        publishedDate: item.volumeInfo.publishedDate || 'Unknown publish date',
+        description: item.volumeInfo.description || '',
+        pageCount: item.volumeInfo.pageCount || 0,
+        categories: item.volumeInfo.categories || [],
+        thumbnail: item.volumeInfo.imageLinks ? item.volumeInfo.imageLinks.thumbnail : '../assets/imgs/error.jpg',
+        language: item.volumeInfo.language || 'en',
         listPrice: {
             amount: item.saleInfo && item.saleInfo.listPrice ? item.saleInfo.listPrice.amount : 0,
             currencyCode: item.saleInfo && item.saleInfo.listPrice ? item.saleInfo.listPrice.currencyCode : 'EUR',
             isOnSale: item.saleInfo && item.saleInfo.saleability === 'FOR_SALE',
         },
     }
+
+    return save(googleBookInfo)
     
-    console.log(googleBookInfo)
+    // console.log(googleBookInfo)
 }
+
+
+
+
 
 function getEmptyBook() {
     return {
