@@ -12,13 +12,14 @@ export const bookService = {
     remove,
     save,
     getEmptyBook,
-    getNextBookId,
+    // getNextBookId,
     getFilterBy,
     setFilterBy,
     getDefaultFilter,
     addReview,
     removeReview,
     getEmptyReview,
+    getSiblingBookId,
 }
 
 _createBooksFromJson()
@@ -91,14 +92,39 @@ function setFilterBy(filterBy = {}) {
     return gFilterBy
 }
 
-function getNextBookId(bookId) {
+// function getNextBookId(bookId) {
+//     return storageService.query(BOOK_KEY)
+//         .then(books => {
+//             let nextBookIdx = books.findIndex(book => book.id === bookId) + 1
+//             if (nextBookIdx === books.length) nextBookIdx = 0
+//             return books[nextBookIdx].id
+//         })
+// }
+
+
+function getSiblingBookId(bookId, direction) {
     return storageService.query(BOOK_KEY)
         .then(books => {
-            let nextBookIdx = books.findIndex(book => book.id === bookId) + 1
-            if (nextBookIdx === books.length) nextBookIdx = 0
-            return books[nextBookIdx].id
+            const currentBookIdx = books.findIndex(book => book.id === bookId)
+
+            if (currentBookIdx === -1) {
+                throw new Error('Book not found')
+            }
+
+            let SiblingBookIdx
+
+            if (direction === 'next') {
+                SiblingBookIdx = (currentBookIdx + 1) % books.length
+            } else if (direction === 'previous') {
+                SiblingBookIdx = (currentBookIdx - 1 + books.length) % books.length
+            } else {
+                throw new Error('Invalid direction')
+            }
+
+            return books[SiblingBookIdx].id
         })
 }
+
 
 
 function addReview(bookId, review) {

@@ -15,6 +15,8 @@ export function BookDetails({ onBack }) {
     const [isReview, setIsReview] = useState(false)
     const { bookId } = useParams()
 
+    const nextBookIdPromise = bookService.getSiblingBookId(params.bookId, 'next');
+    const previousBookIdPromise = bookService.getSiblingBookId(params.bookId, 'previous');
 
 
 
@@ -74,20 +76,29 @@ export function BookDetails({ onBack }) {
             })
     }
 
-
-
     const onNextBook = () => {
-        bookService.getNextBookId(params.bookId)
+        bookService.getSiblingBookId(params.bookId, 'next')
             .then((nextBookId) => {
                 navigate(`/book/${nextBookId}`)
             })
-            .catch((err) => {
-                console.error("Error getting next book ID:", err)
-                navigate('/book')
+            .catch(() => {
+                console.error('Error getting next book ID')
+                navigate('/books')
             })
     }
 
 
+
+    const onPrevBook = () => {
+        bookService.getSiblingBookId(params.bookId, 'previous')
+            .then((nextBookId) => {
+                navigate(`/book/${nextBookId}`)
+            })
+            .catch(() => {
+                console.error('Error getting next book ID')
+                navigate('/books')
+            })
+    }
 
     if (!book) return <div>Loading...</div>
 
@@ -125,6 +136,9 @@ export function BookDetails({ onBack }) {
 
             <button onClick={onBack}>Back</button>
 
+            <button onClick={onPrevBook}>
+                Previous Book
+            </button>
             <button onClick={onNextBook}>
                 Next Book
             </button>
