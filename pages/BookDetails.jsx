@@ -12,6 +12,10 @@ export function BookDetails({ onBack }) {
     const currYear = new Date().getFullYear()
     const params = useParams()
     const navigate = useNavigate()
+    const [isReview, setIsReview] = useState(false)
+    const { bookId } = useParams()
+
+
 
 
     useEffect(() => {
